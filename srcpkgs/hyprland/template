@@ -1,6 +1,6 @@
 # Template file for 'hyprland'
 pkgname=hyprland
-version=0.22.0beta
+version=0.24.1
 revision=1
 build_style=meson
 hostmakedepends="pkg-config cmake jq wayland-devel hwids glslang"
@@ -15,7 +15,7 @@ maintainer="Orphaned <orphan@localhost>"
 license="BSD-3-Clause"
 homepage="https://hyprland.org"
 distfiles="https://github.com/hyprwm/Hyprland/releases/download/v${version}/source-v${version}.tar.gz"
-checksum=4f8d20a12080926761913a2c7de136f77b718949667f4f2a4974ad34708fe524
+checksum=91725f5b2382ffa53bed02d61efde5216290073fb2aff6bb414da3c0cd66ef36
 
 build_options="xwayland"
 build_options_default="xwayland"
