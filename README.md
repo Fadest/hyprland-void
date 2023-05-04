@@ -2,7 +2,7 @@
 
 ---
 
-The repository contains port of [Hyprland](https://hyprland.org/)
+The repository contains port of [Hyprland](https://github.com/hyprwm/Hyprland/)
 (wayland compositor based on wlroots) for
 [Void Linux](https://voidlinux.org).
 
