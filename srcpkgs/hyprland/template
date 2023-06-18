@@ -7,8 +7,9 @@ hostmakedepends="pkg-config cmake jq wayland-devel hwids glslang"
 makedepends="wayland-devel libdrm-devel libxkbcommon-devel pixman-devel
  wayland-protocols cairo-devel libinput-devel libgbm-devel libglvnd-devel
  libseat-devel eudev-libudev-devel vulkan-loader Vulkan-Headers xcb-util-devel
- xcb-util-errors-devel xcb-util-wm-devel xcb-util-renderutil-devel
- xcb-util-keysyms-devel $(vopt_if xwayland xorg-server-xwayland)"
+ xcb-util-errors-devel xcb-util-wm-devel xcb-util-renderutil-devel pango-devel
+ xcb-util-keysyms-devel $(vopt_if xwayland xorg-server-xwayland)
+ libliftoff-devel libdisplay-info-devel"
 depends="$(vopt_if xwayland xorg-server-xwayland) xdg-desktop-portal-hyprland"
 short_desc="Dynamic tiling Wayland compositor based on wlroots"
 maintainer="Orphaned <orphan@localhost>"
@@ -20,6 +21,10 @@ checksum=096e478f9f8f4b16bd3d3313f970e216d4ca0d280f6cfddf35126ff8f4350497
 build_options="xwayland"
 build_options_default="xwayland"
 desc_option_xwayland="Enable Xwayland support"
+
+if [ "$XBPS_TARGET_LIBC" = "musl" ]; then
+	makedepends+=" libexecinfo-devel"
+fi
 
 do_install() {
 	DESTDIR=${DESTDIR} meson install -C build --tags runtime,man
