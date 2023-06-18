@@ -17,6 +17,8 @@ feel free to open an issue or pull request.
 Clone this repository and put the `srcpkgs` directory into your local
 copy of [void-packages](https://github.com/void-linux/void-packages).
 
+Append `common/shlibs` to Void's `common/shlibs`.
+
 Refer to `xbps-src`'s instructions for building and installing packages
 locally.
 
